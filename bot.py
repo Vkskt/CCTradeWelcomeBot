@@ -2,8 +2,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 import os
 
-TOKEN=import os
-
+import os
 TOKEN=os.getenv("TOKEN")
 CHANNEL="@CC1kTrading"
 CHANNEL_LINK="https://t.me/CC1kTrading"
