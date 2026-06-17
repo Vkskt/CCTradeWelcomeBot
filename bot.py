@@ -4,7 +4,7 @@ import os
 
 TOKEN=import os
 
-TOKEN = os.getenv("TOKEN")
+TOKEN=os.getenv("TOKEN")
 CHANNEL="@CC1kTrading"
 CHANNEL_LINK="https://t.me/CC1kTrading"
 
