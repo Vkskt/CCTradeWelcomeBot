@@ -3,8 +3,8 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Cont
 import os
 
 TOKEN=os.getenv("TOKEN")
-CHANNEL="@YOUR_PUBLIC_CHANNEL"
-CHANNEL_LINK="https://t.me/+NKJ_saSYY8g5NzVk"
+CHANNEL="@CC1kTrading"
+CHANNEL_LINK="https://t.me/CC1kTrading"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     kb=[[InlineKeyboardButton("📢 Join Channel", url=CHANNEL_LINK)],
