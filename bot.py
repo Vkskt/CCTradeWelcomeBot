@@ -20,12 +20,12 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await q.answer()
     member=await context.bot.get_chat_member(CHANNEL,q.from_user.id)
     
-  if member.status in ["member", "administrator", "creator", "owner"]:
+  if member.status in {"member", "administrator", "creator", "owner"}:
 
     keyboard = [[
         InlineKeyboardButton(
             "🚀 Open CC TRADE Channel",
-            url=https://t.me/CC1kTrading
+            url="https://t.me/CC1kTrading"
         )
     ]]
 
