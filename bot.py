@@ -19,6 +19,7 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
     q=update.callback_query
     await q.answer()
     member=await context.bot.get_chat_member(CHANNEL,q.from_user.id)
+    
   if member.status in ["member", "administrator", "creator", "owner"]:
 
     keyboard = [[
