@@ -19,8 +19,25 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
     q=update.callback_query
     await q.answer()
     member=await context.bot.get_chat_member(CHANNEL,q.from_user.id)
-    if member.status in ["member","administrator","creator","owner"]:
-        await q.edit_message_text("✅ Verification successful! Welcome to CC TRADE.")
+  if member.status in ["member", "administrator", "creator", "owner"]:
+
+    keyboard = [[
+        InlineKeyboardButton(
+            "🚀 Open CC TRADE Channel",
+            url=https://t.me/CC1kTrading
+        )
+    ]]
+
+    await query.edit_message_text(
+        """✅ Verification successful!
+
+🎉 Welcome to CC TRADE!
+
+You now have full access to our official channel.
+
+Click the button below to open the channel and view the latest offers.""",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
     else:
         kb=[[InlineKeyboardButton("📢 Join Channel", url=CHANNEL_LINK)]]
         await q.edit_message_text("❌ You must join the channel first.",
